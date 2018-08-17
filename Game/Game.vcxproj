@@ -128,7 +128,19 @@
     <ClInclude Include="src\Animation.h" />
     <ClInclude Include="src\Background.h" />
     <ClInclude Include="src\Camera.h" />
+    <ClInclude Include="src\Collision.h" />
     <ClInclude Include="src\DrawUtils.h" />
+    <ClInclude Include="src\Enemy.h" />
+    <ClInclude Include="src\Fireball.h" />
+    <ClInclude Include="src\GameObject.h" />
+    <ClInclude Include="src\Goomba.h" />
+    <ClInclude Include="src\Lakitu.h" />
+    <ClInclude Include="src\Level.h" />
+    <ClInclude Include="src\Main.h" />
+    <ClInclude Include="src\Projectile.h" />
+    <ClInclude Include="src\Spiny.h" />
+    <ClInclude Include="src\Start.h" />
+    <ClInclude Include="src\Vector2.h" />
     <ClInclude Include="src\Player.h" />
     <ClInclude Include="src\Sprite.h" />
   </ItemGroup>
@@ -136,8 +148,18 @@
     <ClCompile Include="src\Animation.cpp" />
     <ClCompile Include="src\Background.cpp" />
     <ClCompile Include="src\Camera.cpp" />
+    <ClCompile Include="src\Collision.cpp" />
     <ClCompile Include="src\DrawUtils.cpp" />
+    <ClCompile Include="src\Enemy.cpp" />
+    <ClCompile Include="src\Fireball.cpp" />
+    <ClCompile Include="src\GameObject.cpp" />
+    <ClCompile Include="src\Goomba.cpp" />
+    <ClCompile Include="src\Lakitu.cpp" />
     <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\Projectile.cpp" />
+    <ClCompile Include="src\Spiny.cpp" />
+    <ClCompile Include="src\Start.cpp" />
+    <ClCompile Include="src\Vector2.cpp" />
     <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\Sprite.cpp" />
   </ItemGroup>

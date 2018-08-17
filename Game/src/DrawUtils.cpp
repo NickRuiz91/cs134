@@ -91,24 +91,6 @@ GLuint glTexImageTGAFile(const char* filename, int* outWidth, int* outHeight)
 }
 
 /* Draw the sprite */
-void glReverseDrawSprite(GLuint tex, int x, int y, int w, int h)
-{
-	glBindTexture(GL_TEXTURE_2D, tex);
-	glBegin(GL_QUADS);
-	{
-		glColor3ub(255, 255, 255);
-		glTexCoord2f(1, 1);
-		glVertex2i(x, y);
-		glTexCoord2f(0, 1);
-		glVertex2i(x + w, y);
-		glTexCoord2f(0, 0);
-		glVertex2i(x + w, y + h);
-		glTexCoord2f(1, 0);
-		glVertex2i(x, y + h);
-	}
-	glEnd();
-}
-
 void glDrawSprite(GLuint tex, int x, int y, int w, int h, bool reverse)
 {
 	if (reverse) {

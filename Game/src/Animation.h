@@ -7,9 +7,8 @@ private:
 	GLuint image;
 	float frameTimeSecs;
 public:
-	FrameDef(GLuint i, float fts);
+	FrameDef(GLuint i, float fts) : image(i), frameTimeSecs(fts) {}
 	float getFrameTime();
-	// void setFrameTime(float fts);
 	GLuint getImage();
 };
 

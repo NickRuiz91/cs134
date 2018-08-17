@@ -1,26 +1,44 @@
 #pragma once
-#pragma once
 #include"DrawUtils.h"
+#include"Vector2.h"
+#include"Collision.h"
+#include<string>
 
-/*
+class Tile {
+private:
+	GLuint image;
+	AABB box;
+	int height;
+	int width;
+	std::string tag;
+	Vector2 position;
+	bool collision;
+public:
+	Tile();
+	Tile(GLuint image, bool collision, std::string tag);
+	GLuint getImage();
+	int getWidth();
+	int getHeight();
+	void setHeight(int height);
+	void setWidth(int width);
+	bool getCollision();
+	void setImage(GLuint image);
+	void setCollision(bool collision);
+	void setPos(int x, int y);
+	AABB getAABB();
+	void setTag(std::string t);
+	std::string getTag();
+};
+
 class Background {
 private:
-int width;
-int height;
-int tiles[16][16];
+	//Tile tiles[25][20];
+	Tile tiles[22];
 public:
-Background();
-int getTile(int x, int y);
-int getWidth();
-int getHeight();
+	Background();
+	void loadBackground();
+	void DrawBackground(int camx, int camy);
+	Tile getTile(int x, int y);
+	int getWidth();
+	int getHeight();
 };
-*/
-
-typedef struct {
-	int width;
-	int height;
-	GLuint tiles[36][20];
-} BackgroundDef;
-
-int getTile(BackgroundDef *bd, int x, int y);
-void BackgroundLoad(BackgroundDef* bg);

@@ -1,11 +1,6 @@
 #include"Animation.h"
 
 // FrameDef
-FrameDef::FrameDef(GLuint i, float fts) {
-	image = i;
-	frameTimeSecs = fts;
-}
-
 float FrameDef::getFrameTime() {
 	return frameTimeSecs;
 }
@@ -43,7 +38,7 @@ int AnimationData::AnimUpdate(float deltaTime) {
 	while (secsUntilNextFrame <= 0) {
 		secsUntilNextFrame += def.getCurFrame(curFrame).getFrameTime();
 		curFrame++;
-		if (curFrame >= def.getFramesSize()) {
+		if (curFrame >= def.getFramesSize() || curFrame < 0) {
 			curFrame = 0;
 			//return 1;
 		}

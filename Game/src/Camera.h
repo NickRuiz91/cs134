@@ -1,12 +1,12 @@
 #pragma once
-#ifndef CAMERA_H
-#define CAMERA_H
 
-typedef struct {
+class Camera {
+private:
 	int x;
 	int y;
-} Camera;
-
-void CameraUpdate(Camera *c, char a, char s, char d, char w, int deltatime, int space, int playerX, int playerY);
-
-#endif
+public:
+	Camera();
+	int getX();
+	int getY();
+	void update(int playerX, int playerY, bool grounded = true);
+};
